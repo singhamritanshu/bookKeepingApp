@@ -76,13 +76,13 @@ public class BookRepository {
         return books;
     }
 
-    public Book getBookWithId(int id) throws SQLException {
+    public Book getBookWithName(String name) throws SQLException {
         getConnection();
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM " + this.tableName + " WHERE id = "+id);
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM " + this.tableName + " WHERE book_name = "+ name);
         Book book = new Book();
         while(resultSet.next()){
-            id = resultSet.getInt(1);
+            int id = resultSet.getInt(1);
             String bookName = resultSet.getString(2);
             String authorName = resultSet.getString(3);
             int cost = resultSet.getInt(4);

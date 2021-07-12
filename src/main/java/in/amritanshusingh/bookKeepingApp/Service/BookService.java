@@ -22,8 +22,8 @@ public class BookService {
         return bookRepository.getAllBooks();
     }
 
-    public Book getBookWithId(int id) throws SQLException {
-        return bookRepository.getBookWithId(id);
+    public Book getBookWithName(String name) throws SQLException {
+        return bookRepository.getBookWithName(name);
     }
 
     public String createTable(String table_name) throws SQLException {

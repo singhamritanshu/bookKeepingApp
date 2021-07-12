@@ -25,8 +25,8 @@ public class BookController {
     }
 
     @GetMapping("/getBook")
-    public Book getBookWithId(@RequestParam(value = "id") int id) throws SQLException {
-        return bookService.getBookWithId(id);
+    public Book getBookWithName(@RequestParam(value = "name") String name) throws SQLException {
+        return bookService.getBookWithName(name);
     }
 
     @PostMapping("/createTable/{table_name}")
