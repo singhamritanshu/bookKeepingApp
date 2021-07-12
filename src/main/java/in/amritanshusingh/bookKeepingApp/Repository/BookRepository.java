@@ -13,7 +13,7 @@ public class BookRepository {
     private Connection connection;
     private void getConnection() throws SQLException {
         if(connection == null){
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/books","root","Ind-0542");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/books","root","Enter You Password Here");
         }
     }
 
